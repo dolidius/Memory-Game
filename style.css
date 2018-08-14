@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #3B6DB0;
+}
+
+.board{
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 35px auto;
+}
+
+.card{
+    height: 150px;;
+    width: 140px;
+    position: relative;
+    cursor: pointer;
+    margin: 5px;
+    perspective: 1000px;
+}
+
+.side{
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all .5s;
+    border-radius: 3px;
+}
+
+
+.front{
+    background-color: #6F9FE4;
+}
+
+.front img{
+    width:100%;
+    height: 100%;
+}
+
+.back{
+    transform: rotateY(-180deg);
+}
+
+.back img{
+    width: 100%;
+}
+
+.links{
+    text-align: center;
+    padding-top: 10px;
+    position: relative;
+}
+
+.github:link,
+.github:visited{
+    text-decoration: none;
+    font-size: 35px;
+    font-family: 'Karla';
+    color:white;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s;
+    border-bottom: 4px solid white;
+}
+
+.github:hover{
+    color: rgba(255,255,255,0.7);
+    text-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border-bottom-color: rgba(255,255,255,0.7);
+}
